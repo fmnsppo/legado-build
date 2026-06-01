@@ -13,11 +13,11 @@ jobs:
       - name: Unzip source
         run: |
           ls -la
-          unzip legado-master.zip -d source
+          unzip *.zip -d source
           ls -la source/
-          mv source/legado-master/* .
-          mv source/legado-master/.* . 2>/dev/null || true
-          rm -rf source legado-master.zip
+          mv source/legado-main/* .
+          mv source/legado-main/.* . 2>/dev/null || true
+          rm -rf source *.zip
           ls -la
 
       - name: Setup JDK
